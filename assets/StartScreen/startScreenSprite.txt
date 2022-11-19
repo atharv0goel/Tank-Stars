@@ -1,0 +1,30 @@
+C:/Users/gupta/Desktop/Folders/College/IIITD/Semesters/Semester 3/AP/Project/Tank Stars/assets/StartScreen/sprite.png/sprite.png
+size: 962, 723
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+resumeButton
+  rotate: false
+  xy: 345, 542
+  size: 342, 179
+  split: 56, 62, 55, 62
+  pad: 86, 85, 45, 45
+  orig: 342, 179
+  offset: 0, 0
+  index: -1
+startButton
+  rotate: false
+  xy: 1, 542
+  size: 342, 180
+  split: 55, 63, 55, 62
+  pad: 86, 85, 45, 45
+  orig: 342, 180
+  offset: 0, 0
+  index: -1
+startScreen
+  rotate: false
+  xy: 1, 1
+  size: 960, 539
+  orig: 960, 540
+  offset: 0, 0
+  index: -1

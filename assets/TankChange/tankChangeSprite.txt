@@ -1,0 +1,21 @@
+C:/Users/gupta/Desktop/Folders/College/IIITD/Semesters/Semester 3/AP/Project/Tank Stars/assets/TankChange/tankChangeSprite.png/tankChangeSprite.png
+size: 962, 724
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+continueButton
+  rotate: false
+  xy: 1, 543
+  size: 342, 180
+  split: 8, 18, 44, 52
+  pad: 86, 85, 45, 45
+  orig: 342, 180
+  offset: 0, 0
+  index: -1
+tankChange
+  rotate: false
+  xy: 1, 1
+  size: 960, 540
+  orig: 960, 540
+  offset: 0, 0
+  index: -1
