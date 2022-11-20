@@ -1,6 +1,7 @@
 package com.mygdx.game;
 
 import com.badlogic.gdx.ApplicationAdapter;
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
@@ -14,17 +15,17 @@ public class TankStars extends ApplicationAdapter {
 	SpriteBatch batch;
 
 //	Game Screen
-	Texture game_screen_sprite;
+	Texture GameScreenSprite;
 	TextureRegion gameScreen;
-	TextureRegion tenpercent;
-	TextureRegion fifteenpercent;
-	TextureRegion twentypercent;
-	TextureRegion fiftypercent;
-	TextureRegion seventypercent;
-	TextureRegion hundredpercent;
+	TextureRegion tenPercent;
+	TextureRegion fifteenPercent;
+	TextureRegion twentyPercent;
+	TextureRegion fiftyPercent;
+	TextureRegion seventyPercent;
+	TextureRegion hundredPercent;
 
 //	Load Screen
-	Texture load_screen_sprite;
+	Texture LoadScreenSprite;
 	TextureRegion loadScreen;
 	TextureRegion loadBar1;
 	TextureRegion loadBar2;
@@ -33,15 +34,17 @@ public class TankStars extends ApplicationAdapter {
 
 //	Start Screen
 
-	Texture startScreen_sprite;
-	TextureRegion startScreen_background;
-	TextureRegion startScreen_tank;
-	TextureRegion startScreen_platform;
+	Texture StartScreenSprite;
+	TextureRegion startScreenBackground;
+	TextureRegion startScreenTank;
+	TextureRegion startScreenPlatform;
+	TextureRegion startScreenTree;
+	TextureRegion startScreenMuzzle;
+	TextureRegion tankStarsLogo;
 	TextureRegion startButton;
 	TextureRegion resumeButton;
-	TextureRegion startScreen_tree;
-	TextureRegion startScreen_muzzle;
-	TextureRegion tankStarsLogo;
+	Texture exitButton;
+	Texture settings;
 
 
 //	Home Screen
@@ -57,7 +60,7 @@ public class TankStars extends ApplicationAdapter {
 
 //	Pause Screen
 //	Copied some assets from Start Screen
-	Texture pauseScreen_sprite;
+	Texture PauseScreenSprite;
 	TextureRegion pauseScreen;
 	TextureRegion restartMenuButton;
 	TextureRegion resumeMenuButton;
@@ -65,12 +68,14 @@ public class TankStars extends ApplicationAdapter {
 
 //	Tank Change
 //	Copied some assets from Start Screen
-	Texture tankChange_sprite;
-	Texture tankChange_platform;
-	TextureRegion tankChange_tank;
-	TextureRegion tankChange_leftArrow;
-	TextureRegion tankChange_rightArrow;
-	TextureRegion continueButton;
+	Texture TankChangePlayer1;
+	Texture TankChangePlayer2;
+	Texture TankChangeTank;
+	Texture TankChangeLeftArrow;
+	Texture TankChangeRightArrow;
+	Texture TankChangeMuzzle;
+	Texture TankChangeContinueButton;
+	Texture TankChangePlatform;
 
 
 	@Override
@@ -79,35 +84,37 @@ public class TankStars extends ApplicationAdapter {
 
 //	Game Screen
 //		Remove the percentage elements using a timer
-	game_screen_sprite = new Texture("GameScreen/gameScreenSprite.png");
-	gameScreen = new TextureRegion(game_screen_sprite, 0, 0, 960, 540);
+	GameScreenSprite = new Texture("GameScreen/gameScreenSprite.png");
+	gameScreen = new TextureRegion(GameScreenSprite, 0, 0, 960, 540);
 
-	tenpercent = new TextureRegion(gameScreen, 408, 540, 100 , 100);
-	fifteenpercent = new TextureRegion(gameScreen, 0, 540, 100 , 100);
-	twentypercent = new TextureRegion(gameScreen, 510, 540, 100 , 100);
-	fiftypercent = new TextureRegion(gameScreen, 102, 540, 100 , 100);
-	seventypercent = new TextureRegion(gameScreen, 306, 540, 100 , 100);
-	hundredpercent = new TextureRegion(gameScreen, 204, 540, 100 , 100);
+	tenPercent = new TextureRegion(gameScreen, 408, 540, 100 , 100);
+	fifteenPercent = new TextureRegion(gameScreen, 0, 540, 100 , 100);
+	twentyPercent = new TextureRegion(gameScreen, 510, 540, 100 , 100);
+	fiftyPercent = new TextureRegion(gameScreen, 102, 540, 100 , 100);
+	seventyPercent = new TextureRegion(gameScreen, 306, 540, 100 , 100);
+	hundredPercent = new TextureRegion(gameScreen, 204, 540, 100 , 100);
 
 //	Loading Screen
 //		Change ProgressBar, Remove the progress Bar using a timer
-	load_screen_sprite = new Texture("LoadScreen/loadScreenSprite.png");
-	loadScreen = new TextureRegion(load_screen_sprite, 0, 65, 960, 540);
-	loadBar1 = new TextureRegion(load_screen_sprite, 0, 0, 60, 65);
-	loadBar2 = new TextureRegion(load_screen_sprite, 67, 0, 64, 62);
-	loadBar3 = new TextureRegion(load_screen_sprite, 133, 0, 63, 65);
+	LoadScreenSprite = new Texture("LoadScreen/loadScreenSprite.png");
+	loadScreen = new TextureRegion(LoadScreenSprite, 0, 65, 960, 540);
+	loadBar1 = new TextureRegion(LoadScreenSprite, 0, 0, 60, 65);
+	loadBar2 = new TextureRegion(LoadScreenSprite, 67, 0, 64, 62);
+	loadBar3 = new TextureRegion(LoadScreenSprite, 133, 0, 63, 65);
 
 //	Start Screen
 //		Rotate Tank, Logo, Buttons
-	startScreen_sprite = new Texture("StartScreen/startScreenSprite.png");
-	startScreen_background = new TextureRegion(startScreen_sprite, 0, 0, 960, 540);
-	startScreen_tank = new TextureRegion(startScreen_sprite, 146, 542, 190, 290);
-	startScreen_platform = new TextureRegion(startScreen_sprite, 338, 542, 567, 136);
-	startButton = new TextureRegion(startScreen_sprite, 338, 680,153, 268);
-	resumeButton = new TextureRegion(startScreen_sprite, 493, 680, 152, 268);
-	startScreen_tree = new TextureRegion(startScreen_sprite, 647, 680, 207,224);
-	startScreen_muzzle = new TextureRegion(startScreen_sprite, 0, 851, 135, 77);
-	tankStarsLogo = new TextureRegion(startScreen_sprite, 0, 542, 144, 307);
+	StartScreenSprite = new Texture("StartScreen/startScreenSprite.png");
+	startScreenBackground = new TextureRegion(StartScreenSprite, 0, 0, 960, 540);
+	startScreenTank = new TextureRegion(StartScreenSprite, 146, 542, 190, 290);
+	startScreenPlatform = new TextureRegion(StartScreenSprite, 338, 542, 567, 136);
+	startButton = new TextureRegion(StartScreenSprite, 338, 680,153, 268);
+	resumeButton = new TextureRegion(StartScreenSprite, 493, 680, 152, 268);
+	startScreenTree = new TextureRegion(StartScreenSprite, 647, 680, 207,224);
+	startScreenMuzzle = new TextureRegion(StartScreenSprite, 0, 851, 135, 77);
+	tankStarsLogo = new TextureRegion(StartScreenSprite, 0, 542, 144, 307);
+	exitButton = new Texture("StartScreen/Raw/exitButton.png");
+	settings = new Texture("StartScreen/Raw/settings.png");
 
 //	Home Screen
 //		Rotate Tank and Logo
@@ -121,20 +128,22 @@ public class TankStars extends ApplicationAdapter {
 
 //  Pause Screen
 //		Rotate Icons
-	pauseScreen_sprite = new Texture("PauseScreen/pauseScreenSprite.png");
-	pauseScreen = new TextureRegion(pauseScreen_sprite, 0,0, 960, 540);
-	restartMenuButton = new TextureRegion(pauseScreen_sprite, 157, 540, 154, 155);
-	resumeMenuButton = new TextureRegion(pauseScreen_sprite, 314, 540, 154, 155);
-	exitMenuButton = new TextureRegion(pauseScreen_sprite, 0, 540, 154, 155);
+	PauseScreenSprite = new Texture("PauseScreen/pauseScreenSprite.png");
+	pauseScreen = new TextureRegion(PauseScreenSprite, 0,0, 960, 540);
+	restartMenuButton = new TextureRegion(PauseScreenSprite, 157, 540, 154, 155);
+	resumeMenuButton = new TextureRegion(PauseScreenSprite, 314, 540, 154, 155);
+	exitMenuButton = new TextureRegion(PauseScreenSprite, 0, 540, 154, 155);
 
 //	Tank Change
 //		Overlay muzzle, fix logo
-	tankChange_sprite = new Texture("TankChange/tankChangeSprite.png");
-	tankChange_tank = new TextureRegion(tankChange_sprite, 0, 542, 345, 197);
-	tankChange_platform = new Texture("TankChange/platform.png");
-	tankChange_leftArrow = new TextureRegion(tankChange_sprite, 731, 636, 56, 78);
-	tankChange_rightArrow = new TextureRegion(tankChange_sprite, 789, 636, 56, 78);
-	continueButton = new TextureRegion(tankChange_sprite, 731, 542, 212, 92);
+	TankChangePlayer1 = new Texture("TankChange/Raw/player1.png");
+	TankChangePlayer2 = new Texture("TankChange/Raw/player2.png");
+	TankChangeTank = new Texture("TankChange/Raw/Tank.png");
+	TankChangeLeftArrow = new Texture("TankChange/Raw/leftArrow.png");
+	TankChangeRightArrow = new Texture("TankChange/Raw/rightArrow.png");
+	TankChangeMuzzle = new Texture("TankChange/Raw/muzzle.png");
+	TankChangeContinueButton = new Texture("TankChange/Raw/continueButton.png");
+	TankChangePlatform = new Texture("TankChange/Raw/Platform.png");
 
 	}
 
@@ -149,12 +158,12 @@ public class TankStars extends ApplicationAdapter {
 
 //		Game Screen
 		batch.draw(gameScreen, 0, 0);
-		batch.draw(tenpercent, 841, 22);
-		batch.draw(fifteenpercent, 841, 22);
-		batch.draw(twentypercent, 841, 22);
-		batch.draw(fiftypercent, 841, 22);
-		batch.draw(seventypercent, 841, 22);
-		batch.draw(hundredpercent, 841, 22);
+		batch.draw(tenPercent, 841, 22);
+		batch.draw(fifteenPercent, 841, 22);
+		batch.draw(twentyPercent, 841, 22);
+		batch.draw(fiftyPercent, 841, 22);
+		batch.draw(seventyPercent, 841, 22);
+		batch.draw(hundredPercent, 841, 22);
 
 //		Loading Screen
 		batch.draw(loadScreen, 0, 0);
@@ -163,47 +172,62 @@ public class TankStars extends ApplicationAdapter {
 		batch.draw(loadBar3, 870, 20);
 
 //		Start Screen
-		batch.draw(startScreen_background, 0, 0);
-		batch.draw(startScreen_tank, 155, 137);
-		batch.draw(startScreen_platform, 0, 0);
+		batch.draw(startScreenBackground, 0, 0);
+		batch.draw(startScreenTank, 155, 137);
+		batch.draw(startScreenPlatform, 0, 0);
 		batch.draw(startButton, 639, 210);
 		batch.draw(resumeButton, 639, 58);
-		batch.draw(startScreen_tree, 445, 0);
-		batch.draw(startScreen_muzzle, 413, 232);
+		batch.draw(startScreenTree, 445, 0);
+		batch.draw(startScreenMuzzle, 413, 232);
 		batch.draw(tankStarsLogo, 394, 349);
+		batch.draw(settings, 29, 462);
+		batch.draw(exitButton, 900, 20);
 
 
 //		Home Screen
-		batch.draw(startScreen_background, 0, 0);
-		batch.draw(startScreen_tank, 155, 137);
-		batch.draw(startScreen_platform, 0, 0);
-		batch.draw(startScreen_tree, 445, 0);
-		batch.draw(startScreen_muzzle, 413, 232);
+		batch.draw(startScreenBackground, 0, 0);
+		batch.draw(startScreenTank, 155, 137);
+		batch.draw(startScreenPlatform, 0, 0);
+		batch.draw(startScreenTree, 445, 0);
+		batch.draw(startScreenMuzzle, 413, 232);
 		batch.draw(tankStarsLogo, 394, 349);
-		batch.draw(playerButton, 639, 210);
-		batch.draw(computerButton, 639, 58);
+		batch.draw(playerButton, 620, 210);
+		batch.draw(computerButton, 620, 58);
+		batch.draw(settings, 29, 462);
+		batch.draw(exitButton, 900, 20);
+
 
 //		Saved Games
 //		Fix tank, logo rotation
-		batch.draw(startScreen_background, 0, 0);
-		batch.draw(startScreen_tank, 155, 137);
-		batch.draw(startScreen_platform, 0, 0);
-		batch.draw(startScreen_tree, 445, 0);
-		batch.draw(startScreen_muzzle, 413, 232);
+		batch.draw(startScreenBackground, 0, 0);
+		batch.draw(startScreenTank, 155, 137);
+		batch.draw(startScreenPlatform, 0, 0);
+		batch.draw(startScreenTree, 445, 0);
+		batch.draw(startScreenMuzzle, 413, 232);
 		batch.draw(tankStarsLogo, 394, 349);
-		batch.draw(savedGame1, 639, 210);
+		batch.draw(savedGame1, 639, 238);
 		batch.draw(savedGame2, 639, 140);
-		batch.draw(savedGame3, 639, 70);
+		batch.draw(savedGame3, 639, 43);
+		batch.draw(settings, 29, 462);
+		batch.draw(exitButton, 900, 20);
+
 
 //		Tank Change
-		batch.draw(startScreen_background, 0, 0);
-		batch.draw(tankChange_platform, 0, 0);
-		batch.draw(startScreen_muzzle, 610, 214);
-		batch.draw(tankStarsLogo, 331, 355);
-		batch.draw(tankChange_tank, 324, 116);
-		batch.draw(tankChange_leftArrow, 230,200);
-		batch.draw(tankChange_rightArrow, 777, 200);
-		batch.draw(continueButton, 379, 0);
+		batch.draw(startScreenBackground, 0, 0);
+		batch.draw(TankChangePlayer1, 134, 306);
+		batch.draw(TankChangePlayer2, 644, 296);
+		batch.draw(tankStarsLogo, 352, 348);
+		batch.draw(TankChangeLeftArrow, 40, 186);
+		batch.draw(TankChangeLeftArrow, 518, 186);
+		batch.draw(TankChangeRightArrow, 410, 186);
+		batch.draw(TankChangeRightArrow, 870, 186);
+		batch.draw(TankChangeTank, 126, 131);
+		batch.draw(TankChangeTank, 625, 131);
+		batch.draw(TankChangePlatform, 0, 0);
+		batch.draw(TankChangeContinueButton, 400, 30);
+		batch.draw(settings, 29, 462);
+		batch.draw(exitButton, 900, 20);
+
 
 //		Pause Screen
 		batch.draw(pauseScreen, 0 ,0);
@@ -218,6 +242,34 @@ public class TankStars extends ApplicationAdapter {
 	@Override
 	public void dispose () {
 		batch.dispose();
+
+
+		GameScreenSprite.dispose();
+
+		LoadScreenSprite.dispose();
+
+		StartScreenSprite.dispose();
+		exitButton.dispose();
+		settings.dispose();
+
+		computerButton.dispose();
+		playerButton.dispose();
+
+		savedGame1.dispose();
+		savedGame2.dispose();
+		savedGame3.dispose();
+
+		PauseScreenSprite.dispose();
+
+		TankChangePlayer1.dispose();
+		TankChangePlayer2.dispose();
+		TankChangeTank.dispose();
+		TankChangeLeftArrow.dispose();
+		TankChangeRightArrow.dispose();
+		TankChangeMuzzle.dispose();
+		TankChangeContinueButton.dispose();
+		TankChangePlatform.dispose();
+
 	}
 
 }
