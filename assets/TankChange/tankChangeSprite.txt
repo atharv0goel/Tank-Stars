@@ -1,21 +1,66 @@
 C:/Users/gupta/Desktop/Folders/College/IIITD/Semesters/Semester 3/AP/Project/Tank Stars/assets/TankChange/tankChangeSprite.png/tankChangeSprite.png
-size: 962, 724
+size: 962, 727
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-continueButton
-  rotate: false
-  xy: 1, 543
-  size: 342, 180
-  split: 8, 18, 44, 52
-  pad: 86, 85, 45, 45
-  orig: 342, 180
-  offset: 0, 0
-  index: -1
-tankChange
+background
   rotate: false
   xy: 1, 1
   size: 960, 540
+  split: 0, 0, 0, 0
+  pad: 240, 240, 135, 135
   orig: 960, 540
+  offset: 0, 0
+  index: -1
+continueButton
+  rotate: false
+  xy: 732, 543
+  size: 212, 92
+  split: 3, 5, 15, 19
+  pad: 53, 53, 23, 23
+  orig: 212, 92
+  offset: 0, 0
+  index: -1
+leftArrow
+  rotate: false
+  xy: 732, 637
+  size: 56, 78
+  split: 0, 0, 0, 0
+  pad: 14, 14, 20, 19
+  orig: 56, 78
+  offset: 0, 0
+  index: -1
+muzzle
+  rotate: true
+  xy: 653, 543
+  size: 135, 77
+  split: 0, 0, 0, 0
+  pad: 34, 34, 19, 19
+  orig: 135, 77
+  offset: 0, 0
+  index: -1
+rightArrow
+  rotate: false
+  xy: 790, 637
+  size: 56, 78
+  split: 0, 0, 0, 0
+  pad: 14, 14, 20, 19
+  orig: 56, 78
+  offset: 0, 0
+  index: -1
+Tank
+  rotate: false
+  xy: 1, 543
+  size: 341, 183
+  orig: 368, 197
+  offset: 15, 14
+  index: -1
+TankStarsLogo
+  rotate: false
+  xy: 344, 543
+  size: 307, 144
+  split: 0, 28, 5, 0
+  pad: 77, 77, 36, 36
+  orig: 307, 144
   offset: 0, 0
   index: -1
