@@ -10,6 +10,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
+import org.w3c.dom.Text;
 
 public class TankStars extends ApplicationAdapter {
 
@@ -81,6 +82,23 @@ public class TankStars extends ApplicationAdapter {
 	Texture TankChangeMuzzle;
 	Texture TankChangeContinueButton;
 	Texture TankChangePlatform;
+
+//	Battle Screen
+	Texture BattleScreenSprite;
+	TextureRegion battleScreenBackground;
+	TextureRegion battleScreenPlatform;
+	TextureRegion tank1;
+	TextureRegion tank2;
+	TextureRegion earth;
+	TextureRegion whitePlanet;
+	TextureRegion redPlanet;
+	TextureRegion rock;
+	TextureRegion superNova;
+	TextureRegion healthBar;
+	TextureRegion logo;
+	TextureRegion player1Text;
+	TextureRegion player2Text;
+
 
 
 	@Override
@@ -170,6 +188,22 @@ public class TankStars extends ApplicationAdapter {
 	TankChangeContinueButton = new Texture("TankChange/Raw/continueButton.png");
 	TankChangePlatform = new Texture("TankChange/Raw/Platform.png");
 
+//	Battle Screen
+	BattleScreenSprite = new Texture("BattleScreen/BattleScreenSprite.png");
+	battleScreenBackground = new TextureRegion(BattleScreenSprite, 0, 0, 960, 540);
+	battleScreenPlatform = new TextureRegion(BattleScreenSprite, 0, 542, 960, 119);
+	tank1 = new TextureRegion(BattleScreenSprite, 0, 663, 203, 283);
+	tank2 = new TextureRegion(BattleScreenSprite, 205, 663, 307, 161);
+	earth = new TextureRegion(BattleScreenSprite, 763, 773, 153, 156);
+	whitePlanet = new TextureRegion(BattleScreenSprite, 484, 826, 128, 86);
+	redPlanet = new TextureRegion(BattleScreenSprite, 205, 873, 81, 67);
+	rock = new TextureRegion(BattleScreenSprite, 514, 663, 223, 138);
+	superNova = new TextureRegion(BattleScreenSprite, 739, 663, 108, 99);
+	healthBar = new TextureRegion(BattleScreenSprite, 205, 826, 277, 45);
+	logo = new TextureRegion(BattleScreenSprite, 612, 803, 149, 147);
+	player1Text = new TextureRegion(BattleScreenSprite, 288, 873, 26, 77);
+	player2Text = new TextureRegion(BattleScreenSprite, 316, 873, 19, 73);
+
 	}
 
 	@Override
@@ -258,6 +292,28 @@ public class TankStars extends ApplicationAdapter {
 //		batch.draw(resumeMenuButton, 340, 30);
 //		batch.draw(restartMenuButton, 405, 30);
 //		batch.draw(exitMenuButton, 470, 30);
+
+//		Battle Screen
+		batch.draw(battleScreenBackground, 0, 0);
+		batch.draw(rock, 373, 80);
+		batch.draw(rock, -61, 80);
+		batch.draw(rock, 800, 41);
+		batch.draw(battleScreenPlatform, 0, 0);
+
+		batch.draw(tank1, 75, 110);
+		batch.draw(tank2, 607, 110);
+		batch.draw(earth, 783, 299);
+		batch.draw(whitePlanet, 75, 303);
+		batch.draw(redPlanet, 523, 299);
+		batch.draw(superNova, 304, 299);
+		batch.draw(healthBar, 215, 448);
+		batch.draw(healthBar, 492, 448);
+		batch.draw(logo, 412, 381);
+		batch.draw(player1Text, 286, 455);
+		batch.draw(player2Text, 620, 455);
+
+
+
 
 		batch.end();
 
