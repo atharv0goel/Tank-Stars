@@ -5,6 +5,7 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
@@ -46,6 +47,10 @@ public class TankStars extends ApplicationAdapter {
 	Texture exitButton;
 	Texture settings;
 
+	Sprite startScreenTankSprite;
+	Sprite tankStarsLogoSprite;
+	Sprite startButtonSprite;
+	Sprite resumeButtonSprite;
 
 //	Home Screen
 //	Copied some assets from Start Screen
@@ -116,6 +121,26 @@ public class TankStars extends ApplicationAdapter {
 	exitButton = new Texture("StartScreen/Raw/exitButton.png");
 	settings = new Texture("StartScreen/Raw/settings.png");
 
+	startScreenTankSprite = new Sprite(startScreenTank);
+	startScreenTankSprite.setPosition(105, 317);
+	startScreenTankSprite.setOrigin(startScreenTankSprite.getWidth()/2, startScreenTankSprite.getHeight()/2);
+	startScreenTankSprite.setRotation(270);
+
+	tankStarsLogoSprite = new Sprite(tankStarsLogo);
+	tankStarsLogoSprite.setPosition(350, 480);
+	tankStarsLogoSprite.setOrigin(tankStarsLogoSprite.getWidth()/2, tankStarsLogoSprite.getHeight()/2);
+	tankStarsLogoSprite.setRotation(270);
+
+	startButtonSprite = new Sprite(startButton);
+	startButtonSprite.setPosition(360, 480);
+	startButtonSprite.setOrigin(startButtonSprite.getWidth()/2, startButtonSprite.getHeight()/2);
+	startButtonSprite.setRotation(270);
+
+	resumeButtonSprite = new Sprite(resumeButton);
+	resumeButtonSprite.setPosition(360, 480);
+	resumeButtonSprite.setOrigin(resumeButtonSprite.getWidth()/2, resumeButtonSprite.getHeight()/2);
+	resumeButtonSprite.setRotation(270);
+
 //	Home Screen
 //		Rotate Tank and Logo
 	computerButton = new Texture("HomeScreen/computerButton.png");
@@ -147,8 +172,6 @@ public class TankStars extends ApplicationAdapter {
 
 	}
 
-
-
 	@Override
 	public void render () {
 		Gdx.gl.glClearColor(1, 0, 0, 1);
@@ -173,67 +196,68 @@ public class TankStars extends ApplicationAdapter {
 
 //		Start Screen
 		batch.draw(startScreenBackground, 0, 0);
-		batch.draw(startScreenTank, 155, 137);
+		batch.draw(startScreenTankSprite, startScreenTankSprite.getX(), startScreenTankSprite.getY(), 0, 0, startScreenTankSprite.getWidth(), startScreenTankSprite.getHeight(), 1, 1, startScreenTankSprite.getRotation());
 		batch.draw(startScreenPlatform, 0, 0);
-		batch.draw(startButton, 639, 210);
-		batch.draw(resumeButton, 639, 58);
+		batch.draw(startButtonSprite, 650, 400, 0, 0, startButtonSprite.getWidth(), startButtonSprite.getHeight(), 1, 1, startButtonSprite.getRotation());
+		batch.draw(resumeButtonSprite, 650, 280, 0, 0, resumeButtonSprite.getWidth(), resumeButtonSprite.getHeight(), 1, 1, resumeButtonSprite.getRotation());
 		batch.draw(startScreenTree, 445, 0);
-		batch.draw(startScreenMuzzle, 413, 232);
-		batch.draw(tankStarsLogo, 394, 349);
+		batch.draw(startScreenMuzzle, 353, 225);
+		batch.draw(tankStarsLogoSprite, tankStarsLogoSprite.getX(), tankStarsLogoSprite.getY(), 0, 0, tankStarsLogoSprite.getWidth(), tankStarsLogoSprite.getHeight(), 1, 1, tankStarsLogoSprite.getRotation());
 		batch.draw(settings, 29, 462);
 		batch.draw(exitButton, 900, 20);
 
 
 //		Home Screen
-		batch.draw(startScreenBackground, 0, 0);
-		batch.draw(startScreenTank, 155, 137);
-		batch.draw(startScreenPlatform, 0, 0);
-		batch.draw(startScreenTree, 445, 0);
-		batch.draw(startScreenMuzzle, 413, 232);
-		batch.draw(tankStarsLogo, 394, 349);
-		batch.draw(playerButton, 620, 210);
-		batch.draw(computerButton, 620, 58);
-		batch.draw(settings, 29, 462);
-		batch.draw(exitButton, 900, 20);
+//		batch.draw(startScreenBackground, 0, 0);
+//		batch.draw(startScreenTankSprite, startScreenTankSprite.getX(), startScreenTankSprite.getY(), 0, 0, startScreenTankSprite.getWidth(), startScreenTankSprite.getHeight(), 1, 1, startScreenTankSprite.getRotation());
+//		batch.draw(startScreenPlatform, 0, 0);
+//		batch.draw(startScreenTree, 445, 0);
+//		batch.draw(startScreenMuzzle, 353, 225);
+//		batch.draw(tankStarsLogoSprite, tankStarsLogoSprite.getX(), tankStarsLogoSprite.getY(), 0, 0, tankStarsLogoSprite.getWidth(), tankStarsLogoSprite.getHeight(), 1, 1, tankStarsLogoSprite.getRotation());
+//		batch.draw(playerButton, 620, 210);
+//		batch.draw(computerButton, 620, 58);
+//		batch.draw(settings, 29, 462);
+//		batch.draw(exitButton, 900, 20);
 
 
 //		Saved Games
 //		Fix tank, logo rotation
-		batch.draw(startScreenBackground, 0, 0);
-		batch.draw(startScreenTank, 155, 137);
-		batch.draw(startScreenPlatform, 0, 0);
-		batch.draw(startScreenTree, 445, 0);
-		batch.draw(startScreenMuzzle, 413, 232);
-		batch.draw(tankStarsLogo, 394, 349);
-		batch.draw(savedGame1, 639, 238);
-		batch.draw(savedGame2, 639, 140);
-		batch.draw(savedGame3, 639, 43);
-		batch.draw(settings, 29, 462);
-		batch.draw(exitButton, 900, 20);
+//		batch.draw(startScreenBackground, 0, 0);
+//		batch.draw(startScreenTankSprite, startScreenTankSprite.getX(), startScreenTankSprite.getY(), 0, 0, startScreenTankSprite.getWidth(), startScreenTankSprite.getHeight(), 1, 1, startScreenTankSprite.getRotation());
+//		batch.draw(startScreenPlatform, 0, 0);
+//		batch.draw(startScreenTree, 445, 0);
+//		batch.draw(startScreenMuzzle, 353, 225);
+//		batch.draw(tankStarsLogoSprite, tankStarsLogoSprite.getX(), tankStarsLogoSprite.getY(), 0, 0, tankStarsLogoSprite.getWidth(), tankStarsLogoSprite.getHeight(), 1, 1, tankStarsLogoSprite.getRotation());
+//		batch.draw(savedGame1, 639, 238);
+//		batch.draw(savedGame2, 639, 140);
+//		batch.draw(savedGame3, 639, 43);
+//		batch.draw(settings, 29, 462);
+//		batch.draw(exitButton, 900, 20);
 
 
 //		Tank Change
-		batch.draw(startScreenBackground, 0, 0);
-		batch.draw(TankChangePlayer1, 134, 306);
-		batch.draw(TankChangePlayer2, 644, 296);
-		batch.draw(tankStarsLogo, 352, 348);
-		batch.draw(TankChangeLeftArrow, 40, 186);
-		batch.draw(TankChangeLeftArrow, 518, 186);
-		batch.draw(TankChangeRightArrow, 410, 186);
-		batch.draw(TankChangeRightArrow, 870, 186);
-		batch.draw(TankChangeTank, 126, 131);
-		batch.draw(TankChangeTank, 625, 131);
-		batch.draw(TankChangePlatform, 0, 0);
-		batch.draw(TankChangeContinueButton, 400, 30);
-		batch.draw(settings, 29, 462);
-		batch.draw(exitButton, 900, 20);
+//		batch.draw(startScreenBackground, 0, 0);
+//		batch.draw(TankChangePlayer1, 134, 306);
+//		batch.draw(TankChangePlayer2, 644, 296);
+//		// 352, 348
+//		batch.draw(tankStarsLogoSprite, 352, 520, 0, 0, tankStarsLogoSprite.getWidth(), tankStarsLogoSprite.getHeight(), 1, 1, tankStarsLogoSprite.getRotation());
+//		batch.draw(TankChangeLeftArrow, 40, 186);
+//		batch.draw(TankChangeLeftArrow, 518, 186);
+//		batch.draw(TankChangeRightArrow, 410, 186);
+//		batch.draw(TankChangeRightArrow, 870, 186);
+//		batch.draw(TankChangeTank, 126, 131);
+//		batch.draw(TankChangeTank, 625, 131);
+//		batch.draw(TankChangePlatform, 0, 0);
+//		batch.draw(TankChangeContinueButton, 400, 30);
+//		batch.draw(settings, 29, 462);
+//		batch.draw(exitButton, 900, 20);
 
 
 //		Pause Screen
-		batch.draw(pauseScreen, 0 ,0);
-		batch.draw(resumeMenuButton, 340, 30);
-		batch.draw(restartMenuButton, 405, 30);
-		batch.draw(exitMenuButton, 470, 30);
+//		batch.draw(pauseScreen, 0 ,0);
+//		batch.draw(resumeMenuButton, 340, 30);
+//		batch.draw(restartMenuButton, 405, 30);
+//		batch.draw(exitMenuButton, 470, 30);
 
 		batch.end();
 
