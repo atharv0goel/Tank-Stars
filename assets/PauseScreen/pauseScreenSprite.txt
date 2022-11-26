@@ -1,0 +1,39 @@
+C:/Users/gupta/Desktop/Folders/College/IIITD/Semesters/Semester 3/AP/Project/Tank Stars/assets/PauseScreen/pauseScreenSprite.png/pauseScreenSprite.png
+size: 961, 696
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+exitMenuButton
+  rotate: true
+  xy: 1, 541
+  size: 154, 155
+  split: 51, 50, 49, 50
+  pad: 39, 38, 39, 39
+  orig: 154, 155
+  offset: 0, 0
+  index: -1
+pauseScreen
+  rotate: false
+  xy: 1, 1
+  size: 959, 538
+  orig: 960, 540
+  offset: 0, 2
+  index: -1
+restartMenuButton
+  rotate: true
+  xy: 158, 541
+  size: 154, 155
+  split: 50, 50, 50, 50
+  pad: 39, 38, 39, 39
+  orig: 154, 155
+  offset: 0, 0
+  index: -1
+resumeMenuButton
+  rotate: true
+  xy: 315, 541
+  size: 154, 155
+  split: 50, 50, 50, 50
+  pad: 39, 38, 39, 39
+  orig: 154, 155
+  offset: 0, 0
+  index: -1

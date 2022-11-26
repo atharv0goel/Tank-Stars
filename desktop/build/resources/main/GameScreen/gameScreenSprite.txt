@@ -1,0 +1,54 @@
+C:/Users/gupta/Desktop/Folders/College/IIITD/Semesters/Semester 3/AP/Project/Tank Stars/assets/GameScreen/gameScreenSprite.png/gameScreenSprite.png
+size: 962, 642
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+fifteenpercent
+  rotate: false
+  xy: 1, 541
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+fiftypercent
+  rotate: false
+  xy: 103, 541
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+gameScreen
+  rotate: false
+  xy: 1, 1
+  size: 960, 538
+  orig: 960, 540
+  offset: 0, 2
+  index: -1
+hundredpercent
+  rotate: false
+  xy: 511, 541
+  size: 100, 99
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+seventyfivepercent
+  rotate: false
+  xy: 205, 541
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+tenpercent
+  rotate: false
+  xy: 307, 541
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+twentypercent
+  rotate: false
+  xy: 409, 541
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,122 @@
+C:/Users/gupta/Desktop/Folders/College/IIITD/Semesters/Semester 3/AP/Project/Tank Stars/assets/BattleScreen/BattleScreenSprite.png/BattleScreenSprite.png
+size: 962, 952
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+background
+  rotate: false
+  xy: 1, 1
+  size: 960, 540
+  split: 0, 0, 0, 0
+  pad: 240, 240, 135, 135
+  orig: 960, 540
+  offset: 0, 0
+  index: -1
+earth
+  rotate: false
+  xy: 764, 774
+  size: 153, 156
+  split: 17, 17, 20, 20
+  pad: 38, 38, 39, 39
+  orig: 153, 156
+  offset: 0, 0
+  index: -1
+healthbar
+  rotate: false
+  xy: 206, 827
+  size: 277, 45
+  split: 0, 12, 5, 0
+  pad: 69, 69, 11, 11
+  orig: 277, 45
+  offset: 0, 0
+  index: -1
+logo
+  rotate: true
+  xy: 613, 804
+  size: 147, 149
+  split: 0, 0, 0, 0
+  pad: 37, 37, 37, 37
+  orig: 147, 149
+  offset: 0, 0
+  index: -1
+platform
+  rotate: false
+  xy: 1, 543
+  size: 960, 119
+  split: 0, 0, 0, 0
+  pad: 240, 240, 30, 30
+  orig: 960, 119
+  offset: 0, 0
+  index: -1
+player 1
+  rotate: true
+  xy: 289, 874
+  size: 77, 26
+  split: 4, 4, 0, 7
+  pad: 19, 19, 7, 6
+  orig: 77, 26
+  offset: 0, 0
+  index: -1
+player 2
+  rotate: true
+  xy: 317, 874
+  size: 73, 19
+  split: 0, 0, 0, 0
+  pad: 18, 18, 5, 5
+  orig: 73, 19
+  offset: 0, 0
+  index: -1
+redplanet
+  rotate: false
+  xy: 206, 874
+  size: 81, 67
+  split: 10, 12, 3, 6
+  pad: 20, 20, 17, 17
+  orig: 81, 67
+  offset: 0, 0
+  index: -1
+rock
+  rotate: false
+  xy: 515, 664
+  size: 223, 138
+  split: 5, 0, 0, 14
+  pad: 56, 56, 35, 34
+  orig: 223, 138
+  offset: 0, 0
+  index: -1
+supernova
+  rotate: true
+  xy: 740, 664
+  size: 108, 99
+  split: 6, 6, 9, 25
+  pad: 27, 27, 25, 25
+  orig: 108, 99
+  offset: 0, 0
+  index: -1
+Tanks 1
+  rotate: true
+  xy: 1, 664
+  size: 283, 203
+  split: 10, 35, 65, 9
+  pad: 71, 71, 51, 51
+  orig: 283, 203
+  offset: 0, 0
+  index: -1
+Tanks 2
+  rotate: false
+  xy: 206, 664
+  size: 307, 161
+  split: 12, 0, 0, 6
+  pad: 77, 77, 40, 40
+  orig: 307, 161
+  offset: 0, 0
+  index: -1
+whiteplanet
+  rotate: true
+  xy: 485, 827
+  size: 86, 126
+  split: 0, 0, 21, 19
+  pad: 22, 21, 32, 31
+  orig: 86, 126
+  offset: 0, 0
+  index: -1

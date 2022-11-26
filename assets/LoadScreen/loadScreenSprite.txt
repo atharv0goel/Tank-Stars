@@ -1,0 +1,33 @@
+C:/Users/gupta/Desktop/Folders/College/IIITD/Semesters/Semester 3/AP/Project/Tank Stars/assets/LoadScreen/loadScreenSprite.png/loadScreenSprite.png
+size: 962, 605
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+load1
+  rotate: true
+  xy: 134, 1
+  size: 63, 65
+  orig: 63, 65
+  offset: 0, 0
+  index: -1
+load2
+  rotate: true
+  xy: 1, 1
+  size: 60, 65
+  orig: 60, 65
+  offset: 0, 0
+  index: -1
+load3
+  rotate: false
+  xy: 68, 1
+  size: 64, 62
+  orig: 64, 62
+  offset: 0, 0
+  index: -1
+loadScreen
+  rotate: false
+  xy: 1, 66
+  size: 960, 538
+  orig: 960, 540
+  offset: 0, 2
+  index: -1

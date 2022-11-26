@@ -1,0 +1,77 @@
+C:/Users/gupta/Desktop/Folders/College/IIITD/Semesters/Semester 3/AP/Project/Tank Stars/assets/StartScreen/startScreenSprite.png/startScreenSprite.png
+size: 962, 950
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+background
+  rotate: false
+  xy: 1, 1
+  size: 960, 540
+  split: 0, 0, 0, 0
+  pad: 240, 240, 135, 135
+  orig: 960, 540
+  offset: 0, 0
+  index: -1
+muzzle
+  rotate: false
+  xy: 1, 852
+  size: 135, 77
+  split: 0, 0, 0, 0
+  pad: 34, 34, 19, 19
+  orig: 135, 77
+  offset: 0, 0
+  index: -1
+platform
+  rotate: false
+  xy: 339, 543
+  size: 567, 136
+  split: 0, 14, 0, 0
+  pad: 142, 142, 34, 34
+  orig: 567, 136
+  offset: 0, 0
+  index: -1
+ResumeButton
+  rotate: true
+  xy: 494, 681
+  size: 268, 152
+  split: 40, 43, 45, 50
+  pad: 67, 67, 38, 38
+  orig: 268, 152
+  offset: 0, 0
+  index: -1
+StartButton
+  rotate: true
+  xy: 339, 681
+  size: 268, 153
+  split: 36, 40, 46, 54
+  pad: 67, 67, 38, 38
+  orig: 268, 153
+  offset: 0, 0
+  index: -1
+tank
+  rotate: true
+  xy: 147, 543
+  size: 290, 190
+  split: 0, 0, 0, 0
+  pad: 73, 72, 48, 47
+  orig: 290, 190
+  offset: 0, 0
+  index: -1
+TankStarsLogo
+  rotate: true
+  xy: 1, 543
+  size: 307, 144
+  split: 0, 25, 6, 0
+  pad: 77, 77, 36, 36
+  orig: 307, 144
+  offset: 0, 0
+  index: -1
+Tree
+  rotate: false
+  xy: 648, 681
+  size: 207, 224
+  split: 6, 9, 0, 0
+  pad: 52, 52, 56, 56
+  orig: 207, 224
+  offset: 0, 0
+  index: -1
