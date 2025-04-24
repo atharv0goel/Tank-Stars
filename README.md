@@ -10,7 +10,7 @@ A game inspired by the mobile game *Tank Stars*, designed for PC. Written in Jav
 
 ## How to run
 
-- Clone the repository: `git clone https://github.com/Zynade/Tank-Stars.git`
+- Clone the repository: `git clone https://github.com/atharv0goel/Tank-Stars.git`
 - cd into the directory: `cd Tank-Stars`
 - Run the game: `./gradlew desktop:run`
 - Enjoy!
